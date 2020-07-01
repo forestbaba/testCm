@@ -19,7 +19,8 @@ router.get('/', async(req, res) => {
 });
 
 
-router.post('/',async(req,res)=>{
+router.post('/', async (req, res) => {
+    console.log('=The full Body: ', req.body)
     try {
         let newBook = new Book({
             title : req.body.title,
