@@ -25,7 +25,7 @@ router.post('/', async (req, res) => {
         let newBook = new Book({
             title : req.body.title,
             authors : req.body.authors,
-            description : req.body.description,
+            description: req.body.description ? req.body.description : "No description",
             image : req.body.image,
             link : req.body.link
         })
